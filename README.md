@@ -11,4 +11,3 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 ![Diagrama E/R](/img/TravelLog.png "Diagrama E/R")
 
-Push inicial.
