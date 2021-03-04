@@ -118,7 +118,13 @@ ALTER TABLE `viaje`
 
 ALTER TABLE `itinerario`
   ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
-  
+
+ALTER TABLE `hito`
+  ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
+
+ALTER TABLE `hito`
+  ADD FOREIGN KEY (fk_id_itinerario) REFERENCES itinerario(id_itinerario);
+
   
   
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
