@@ -1,6 +1,3 @@
-
-
- 
 -- phpMyAdmin SQL Dump
 -- version 4.6.6deb5ubuntu0.5
 -- https://www.phpmyadmin.net/

@@ -8,9 +8,9 @@
 
      HOST="den1.mysql1.gear.host"
    PUERTO="3306"
-  USUARIO="fpdavid"
-    CLAVE="usuario_2000"
-BASEDATOS="fpdavid"
+  USUARIO="usuario"
+    CLAVE="usuario"
+BASEDATOS="travellog"
 
 #####################################################
 
