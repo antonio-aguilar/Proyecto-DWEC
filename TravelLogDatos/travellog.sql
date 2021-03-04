@@ -101,17 +101,26 @@ ALTER TABLE `viaje`
 -- AUTO_INCREMENT de la tabla `hitos`
 --
 ALTER TABLE `hitos`
-  MODIFY `id_hito` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_hito` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
 --
 -- AUTO_INCREMENT de la tabla `itinerario`
 --
 ALTER TABLE `itinerario`
-  MODIFY `id_itinerario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_itinerario` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
 --
 -- AUTO_INCREMENT de la tabla `viaje`
 --
 ALTER TABLE `viaje`
   MODIFY `id_viaje` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
+--
+-- Foreign keys
+--
+
+ALTER TABLE `itinerario`
+  ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
+  
+  
+  
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
