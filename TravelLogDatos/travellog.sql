@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 -- Base de datos: `travellog`
 --
 
+DROP TABLE `hitos`;
+DROP TABLE `itinerario`;
+DROP TABLE `viaje`;
 -- --------------------------------------------------------
 
 --
