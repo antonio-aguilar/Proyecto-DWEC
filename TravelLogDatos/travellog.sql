@@ -119,10 +119,10 @@ ALTER TABLE `viaje`
 ALTER TABLE `itinerario`
   ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
 
-ALTER TABLE `hito`
+ALTER TABLE `hitos`
   ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
 
-ALTER TABLE `hito`
+ALTER TABLE `hitos`
   ADD FOREIGN KEY (fk_id_itinerario) REFERENCES itinerario(id_itinerario);
 
   
