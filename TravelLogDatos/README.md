@@ -1,5 +1,4 @@
-# fp-resultados.datos
-Datos de ejemplo para fp-resultados
+# BB.DD. Travellog
+Datos de ejemplo para la base de datos TravelLog
 
 ## Repositorio principal
-[Aplicación web](https://github.com/jamj2000/fp-resultados)
