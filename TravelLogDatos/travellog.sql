@@ -79,13 +79,13 @@ CREATE TABLE `viaje` (
 -- Indices de la tabla `hitos`
 --
 ALTER TABLE `hitos`
-  ADD PRIMARY KEY (`id_hito`);
+  ADD PRIMARY KEY (`id_hito`, `fk_id_itinerario`, `fk_id_viaje`);
 
 --
 -- Indices de la tabla `itinerario`
 --
 ALTER TABLE `itinerario`
-  ADD PRIMARY KEY (`id_itinerario`);
+  ADD PRIMARY KEY (`id_itinerario`, `fk_id_viaje`);
 
 --
 -- Indices de la tabla `viaje`
