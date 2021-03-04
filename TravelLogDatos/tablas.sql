@@ -1,76 +1,116 @@
-drop table if exists modulos_alumnos, alumnos, modulos, profesores;
+
 
  
-CREATE TABLE `alumnos` (
-  `id` integer NOT NULL AUTO_INCREMENT,
-  `apellido1` varchar(100),
-  `apellido2` varchar(100),
-  `nombre` varchar(100),
-  `curso` varchar(100),
-  `fecha_nac` date,
-  `email` varchar(100), 
-  `id_escolar` integer,  
-  `created_at` timestamp NOT NULL DEFAULT NOW(),
-  `updated_at` timestamp NOT NULL DEFAULT NOW(),
-  PRIMARY KEY (`id`)
-) ENGINE=INNODB AUTO_INCREMENT=1;
+-- phpMyAdmin SQL Dump
+-- version 4.6.6deb5ubuntu0.5
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: localhost:3306
+-- Tiempo de generación: 25-02-2021 a las 10:10:29
+-- Versión del servidor: 5.7.33-0ubuntu0.18.04.1
+-- Versión de PHP: 7.2.24-0ubuntu0.18.04.7
+
+-- SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+-- SET time_zone = "+00:00";
 
 
-CREATE TABLE `modulos` (
-  `id` integer NOT NULL AUTO_INCREMENT,
-  `profesor_id` integer,
-  `siglas` varchar(100),
-  `nombre` varchar(100),
-  `curso` varchar(100),
-  `ciclo` varchar(100),
-  `horas_totales` integer,
-  `horas_semanales` integer,
-  `num_resultados` integer,
-  `r1_peso` integer,
-  `r2_peso` integer,
-  `r3_peso` integer,
-  `r4_peso` integer,
-  `r5_peso` integer,
-  `r6_peso` integer,
-  `r7_peso` integer,
-  `r8_peso` integer,
-  `r9_peso` integer,
-  `created_at` timestamp NOT NULL DEFAULT NOW(),
-  `updated_at` timestamp NOT NULL DEFAULT NOW(),
-  PRIMARY KEY (`id`)
-) ENGINE=INNODB AUTO_INCREMENT=1;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Base de datos: `travellog`
+--
 
-CREATE TABLE `profesores` (
-  `id` integer NOT NULL AUTO_INCREMENT,
-  `apellido1` varchar(100),
-  `apellido2` varchar(100),
-  `nombre` varchar(100),
-  `tutoria` varchar(100),
-  `email` varchar(100),
-  `alias` varchar(100),
-  `password` varchar(100),
-  `remember_token` varchar(100) DEFAULT NULL,
-  `admin` char(1),
-  `created_at` timestamp NOT NULL DEFAULT NOW(),
-  `updated_at` timestamp NOT NULL DEFAULT NOW(),
-  PRIMARY KEY (`id`)
-) ENGINE=INNODB AUTO_INCREMENT=1;
+drop table if exists hitos, itinerario, viaje;
 
+-- --------------------------------------------------------
 
-CREATE TABLE `modulos_alumnos` (
-  `id` integer NOT NULL AUTO_INCREMENT,
-  `modulo_id` integer NOT NULL,
-  `alumno_id` integer NOT NULL,
-  `r1` integer DEFAULT '-2',
-  `r2` integer DEFAULT '-2',
-  `r3` integer DEFAULT '-2',
-  `r4` integer DEFAULT '-2',
-  `r5` integer DEFAULT '-2',
-  `r6` integer DEFAULT '-2',
-  `r7` integer DEFAULT '-2',
-  `r8` integer DEFAULT '-2',
-  `r9` integer DEFAULT '-2',
-  PRIMARY KEY (`id`)
-) ENGINE=INNODB AUTO_INCREMENT=1;
+--
+-- Estructura de tabla para la tabla `hitos`
+--
 
+CREATE TABLE `hitos` (
+  `id_hito` int(11) NOT NULL,
+  `descripcion_corta` varchar(20) NOT NULL,
+  `dec_larga` varchar(256) NOT NULL,
+  `horario_inicio` time NOT NULL,
+  `horario_fin` time NOT NULL,
+  `guia` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Hitos del viaje';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `itinerario`
+--
+
+CREATE TABLE `itinerario` (
+  `id_itinerario` int(11) NOT NULL,
+  `descripcion_corta` varchar(20) NOT NULL,
+  `dec_larga` varchar(256) NOT NULL,
+  `ruta` varchar(256) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Itinerarios del viaje';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `viaje`
+--
+
+CREATE TABLE `viaje` (
+  `id_viaje` int(11) NOT NULL COMMENT 'Clave',
+  `desc_corta` varchar(20) NOT NULL COMMENT 'Descripción corta',
+  `dec_larga` varchar(256) NOT NULL COMMENT 'Descripción larga',
+  `fec_inicio` date NOT NULL COMMENT 'Fecha inicio',
+  `fec_fin` date NOT NULL COMMENT 'Fecha fin',
+  `participantes` int(3) NOT NULL COMMENT 'Número de viajeros',
+  `medio_transporte` varchar(20) NOT NULL COMMENT 'Medio de transporte'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Descripción general del viaje';
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `hitos`
+--
+ALTER TABLE `hitos`
+  ADD PRIMARY KEY (`id_hito`);
+
+--
+-- Indices de la tabla `itinerario`
+--
+ALTER TABLE `itinerario`
+  ADD PRIMARY KEY (`id_itinerario`);
+
+--
+-- Indices de la tabla `viaje`
+--
+ALTER TABLE `viaje`
+  ADD PRIMARY KEY (`id_viaje`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `hitos`
+--
+ALTER TABLE `hitos`
+  MODIFY `id_hito` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `itinerario`
+--
+ALTER TABLE `itinerario`
+  MODIFY `id_itinerario` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `viaje`
+--
+ALTER TABLE `viaje`
+  MODIFY `id_viaje` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
