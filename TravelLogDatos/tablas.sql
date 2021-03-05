@@ -30,8 +30,8 @@ drop table if exists hitos, itinerario, viaje;
 
 CREATE TABLE `hitos` (
   `id_hito` int(11) NOT NULL,
-  `descripcion_corta` varchar(20) NOT NULL,
-  `dec_larga` varchar(256) NOT NULL,
+  `desc_corta` varchar(20) NOT NULL,
+  `desc_larga` varchar(256) NOT NULL,
   `horario_inicio` time NOT NULL,
   `horario_fin` time NOT NULL,
   `guia` tinyint(1) NOT NULL
@@ -45,8 +45,8 @@ CREATE TABLE `hitos` (
 
 CREATE TABLE `itinerario` (
   `id_itinerario` int(11) NOT NULL,
-  `descripcion_corta` varchar(20) NOT NULL,
-  `dec_larga` varchar(256) NOT NULL,
+  `desc_corta` varchar(20) NOT NULL,
+  `desc_larga` varchar(256) NOT NULL,
   `ruta` varchar(256) NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Itinerarios del viaje';
@@ -60,7 +60,7 @@ CREATE TABLE `itinerario` (
 CREATE TABLE `viaje` (
   `id_viaje` int(11) NOT NULL COMMENT 'Clave',
   `desc_corta` varchar(20) NOT NULL COMMENT 'Descripción corta',
-  `dec_larga` varchar(256) NOT NULL COMMENT 'Descripción larga',
+  `desc_larga` varchar(256) NOT NULL COMMENT 'Descripción larga',
   `fec_inicio` date NOT NULL COMMENT 'Fecha inicio',
   `fec_fin` date NOT NULL COMMENT 'Fecha fin',
   `participantes` int(3) NOT NULL COMMENT 'Número de viajeros',

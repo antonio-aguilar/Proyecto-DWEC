@@ -16,13 +16,14 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+drop table hitos;
+drop table itinerario;
+drop table viaje;
+
 --
 -- Base de datos: `travellog`
 --
 
-DROP TABLE `hitos`;
-DROP TABLE `itinerario`;
-DROP TABLE `viaje`;
 -- --------------------------------------------------------
 
 --
@@ -31,8 +32,8 @@ DROP TABLE `viaje`;
 
 CREATE TABLE `hitos` (
   `id_hito` int(11) NOT NULL,
-  `fk_id_itinerario` int(11) NOT NULL,
-  `fk_id_viaje` int(11) NOT NULL,  
+  `fk_id_itinerario` int(11) NOT NULL COMMENT 'Clave foranea itinerario',
+  `fk_id_viaje` int(11) NOT NULL COMMENT 'Clave foranea viaje',  
   `desc_corta` varchar(20) NOT NULL,
   `desc_larga` varchar(256) NOT NULL,
   `horario_inicio` time NOT NULL,
@@ -48,7 +49,7 @@ CREATE TABLE `hitos` (
 
 CREATE TABLE `itinerario` (
   `id_itinerario` int(11) NOT NULL,
-  `fk_id_viaje` int(11) NOT NULL,
+  `fk_id_viaje` int(11) NOT NULL COMMENT 'Clave foranea',
   `desc_corta` varchar(20) NOT NULL,
   `desc_larga` varchar(256) NOT NULL,
   `ruta` varchar(256) NOT NULL,
@@ -79,13 +80,13 @@ CREATE TABLE `viaje` (
 -- Indices de la tabla `hitos`
 --
 ALTER TABLE `hitos`
-  ADD PRIMARY KEY (`id_hito`, `fk_id_itinerario`, `fk_id_viaje`);
+  ADD PRIMARY KEY (`id_hito`,`fk_id_itinerario`,`fk_id_viaje`);
 
 --
 -- Indices de la tabla `itinerario`
 --
 ALTER TABLE `itinerario`
-  ADD PRIMARY KEY (`id_itinerario`, `fk_id_viaje`);
+  ADD PRIMARY KEY (`id_itinerario`,`fk_id_viaje`);
 
 --
 -- Indices de la tabla `viaje`
@@ -101,32 +102,30 @@ ALTER TABLE `viaje`
 -- AUTO_INCREMENT de la tabla `hitos`
 --
 ALTER TABLE `hitos`
-  MODIFY `id_hito` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
+  MODIFY `id_hito` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `itinerario`
 --
 ALTER TABLE `itinerario`
-  MODIFY `id_itinerario` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
+  MODIFY `id_itinerario` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `viaje`
 --
 ALTER TABLE `viaje`
   MODIFY `id_viaje` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
---
--- Foreign keys
---
 
-ALTER TABLE `itinerario`
+-- FOREING KEYS.
+
+ALTER TABLE itinerario
   ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
 
-ALTER TABLE `hitos`
+ALTER TABLE hitos
   ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
 
-ALTER TABLE `hitos`
+ALTER TABLE hitos
   ADD FOREIGN KEY (fk_id_itinerario) REFERENCES itinerario(id_itinerario);
 
-  
-  
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
