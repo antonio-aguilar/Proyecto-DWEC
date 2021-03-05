@@ -1,0 +1,6 @@
+id_viaje,desc_corta,desc_larga,fec_inicio,fec_fin,participantes,medio_transporte
+1,Viaje 1,Viaje 1 largo,2021/08/01,2021/08/15,3,Avión
+2,Viaje 2,Viaje 2 largo,2021/08/02,2021/08/16,2,Burra de San Fernando
+3,Viaje 3,Viaje 3 largo,2021/08/03,2021/08/17,4,Bicicleta
+4,Viaje 4,Viaje 4 largo,2021/08/04,2021/08/18,5,A dedo
+5,Viaje 5,Viaje 5 largo,2021/08/05,2021/08/19,6,Barco
