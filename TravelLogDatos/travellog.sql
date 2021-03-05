@@ -33,8 +33,8 @@ CREATE TABLE `hitos` (
   `id_hito` int(11) NOT NULL,
   `fk_id_itinerario` int(11) NOT NULL,
   `fk_id_viaje` int(11) NOT NULL,  
-  `descripcion_corta` varchar(20) NOT NULL,
-  `dec_larga` varchar(256) NOT NULL,
+  `desc_corta` varchar(20) NOT NULL,
+  `desc_larga` varchar(256) NOT NULL,
   `horario_inicio` time NOT NULL,
   `horario_fin` time NOT NULL,
   `guia` tinyint(1) NOT NULL
@@ -49,8 +49,8 @@ CREATE TABLE `hitos` (
 CREATE TABLE `itinerario` (
   `id_itinerario` int(11) NOT NULL,
   `fk_id_viaje` int(11) NOT NULL,
-  `descripcion_corta` varchar(20) NOT NULL,
-  `dec_larga` varchar(256) NOT NULL,
+  `desc_corta` varchar(20) NOT NULL,
+  `desc_larga` varchar(256) NOT NULL,
   `ruta` varchar(256) NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Itinerarios del viaje';
