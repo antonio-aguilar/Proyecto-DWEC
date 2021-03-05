@@ -64,7 +64,7 @@ CREATE TABLE `itinerario` (
 CREATE TABLE `viaje` (
   `id_viaje` int(11) NOT NULL COMMENT 'Clave',
   `desc_corta` varchar(20) NOT NULL COMMENT 'Descripción corta',
-  `dec_larga` varchar(256) NOT NULL COMMENT 'Descripción larga',
+  `desc_larga` varchar(256) NOT NULL COMMENT 'Descripción larga',
   `fec_inicio` date NOT NULL COMMENT 'Fecha inicio',
   `fec_fin` date NOT NULL COMMENT 'Fecha fin',
   `participantes` int(3) NOT NULL COMMENT 'Número de viajeros',
