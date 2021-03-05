@@ -16,9 +16,9 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-drop table hitos;
-drop table itinerario;
-drop table viaje;
+-- drop table hitos;
+-- drop table itinerario;
+-- drop table viaje;
 
 --
 -- Base de datos: `travellog`

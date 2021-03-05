@@ -6,16 +6,16 @@
 # antes de ejecutar este script
 # según el sitio donde se encuentre la BD.
 
-     HOST="den1.mysql1.gear.host"
+     HOST="den1.mysql4.gear.host"
    PUERTO="3306"
-  USUARIO="usuario"
-    CLAVE="usuario"
-BASEDATOS="travellog"
+  USUARIO="travellog2"
+    CLAVE="Travel_01.loG"
+BASEDATOS="travellog2"
 
 #####################################################
 
 
-TABLAS="trabellog.sql"
+TABLAS="travellog.sql"
 VIAJES="viaje.csv"
 ITINERARIO="itinerario.csv"
 HITOS="hitos.csv"
@@ -33,7 +33,7 @@ mysql -u$USUARIO -p$CLAVE -h$HOST -P$PUERTO $BASEDATOS < $TABLAS
 echo "Importando datos desde archivo $VIAJES"
 mysqlimport  --ignore-lines=1 \
              --fields-terminated-by=, \
-             --columns='apellido1,apellido2,nombre,tutoria,email,alias,password,remember_token,admin' \
+             --columns='id_viaje,desc_corta,desc_larga,fec_inicio,fec_fin,participantes,medio_transporte' \
              --local -u$USUARIO -h$HOST -P$PUERTO -p$CLAVE $BASEDATOS $VIAJES 2&> /dev/null
 
 # echo "Importando datos desde archivo $ALUMNOS"
