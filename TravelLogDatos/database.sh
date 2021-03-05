@@ -36,11 +36,11 @@ mysqlimport  --ignore-lines=1 \
              --columns='id_viaje,desc_corta,desc_larga,fec_inicio,fec_fin,participantes,medio_transporte' \
              --local -u$USUARIO -h$HOST -P$PUERTO -p$CLAVE $BASEDATOS $VIAJES 2&> /dev/null
 
-# echo "Importando datos desde archivo $ALUMNOS"
-# mysqlimport  --ignore-lines=1 \
-#              --fields-terminated-by=, \
-#              --columns='apellido1,apellido2,nombre,curso,fecha_nac,email,id_escolar' \
-#              --local -u$USUARIO -p$CLAVE -h$HOST -P$PUERTO $BASEDATOS $ALUMNOS 2&> /dev/null
+echo "Importando datos desde archivo $ITINERARIO"
+mysqlimport  --ignore-lines=1 \
+             --fields-terminated-by=, \
+             --columns='id_itinerario,fk_id_viaje,desc_corta,desc_larga,ruta,fecha' \
+             --local -u$USUARIO -p$CLAVE -h$HOST -P$PUERTO $BASEDATOS $ITINERARIO 2&> /dev/null
 
 # echo "Importando datos desde archivo $MODULOS"
 # mysqlimport  --ignore-lines=1 \
