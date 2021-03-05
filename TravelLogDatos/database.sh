@@ -42,14 +42,9 @@ mysqlimport  --ignore-lines=1 \
              --columns='id_itinerario,fk_id_viaje,desc_corta,desc_larga,ruta,fecha' \
              --local -u$USUARIO -p$CLAVE -h$HOST -P$PUERTO $BASEDATOS $ITINERARIO 2&> /dev/null
 
-# echo "Importando datos desde archivo $MODULOS"
-# mysqlimport  --ignore-lines=1 \
-#              --fields-terminated-by=, \
-#              --columns='profesor_id,siglas,nombre,curso,ciclo,horas_totales,horas_semanales,num_resultados,r1_peso,r2_peso,r3_peso,r4_peso,r5_peso,r6_peso,r7_peso,r8_peso,r9_peso' \
-#              --local -u$USUARIO -p$CLAVE -h$HOST -P$PUERTO $BASEDATOS $MODULOS  2&> /dev/null
+echo "Importando datos desde archivo $HITOS"
+mysqlimport  --ignore-lines=1 \
+             --fields-terminated-by=, \
+             --columns='id_hito,fk_id_itinerario,fk_id_viaje,desc_corta,desc_larga,horario_inicio,horario_fin,guia' \
+             --local -u$USUARIO -p$CLAVE -h$HOST -P$PUERTO $BASEDATOS $HITOS  2&> /dev/null
  
-# echo "Importando datos desde archivo $MODULOS_ALUMNOS"
-# mysqlimport  --ignore-lines=1 \
-#              --fields-terminated-by=, \
-#              --columns='modulo_id,alumno_id,r1,r2,r3,r4,r5,r6,r7,r8,r9' \
-#              --local -u$USUARIO -p$CLAVE -h$HOST -P$PUERTO $BASEDATOS $MODULOS_ALUMNOS 2&> /dev/null
