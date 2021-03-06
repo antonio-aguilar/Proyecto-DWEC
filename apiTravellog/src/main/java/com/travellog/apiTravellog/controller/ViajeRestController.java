@@ -39,6 +39,20 @@ public class ViajeRestController {
     // GETS
     //
     
+    @GetMapping("/info")
+    public String info(){
+        //retornará todos los viajes
+    	String info = "[";
+    	
+    	info += "{Descripción:API de acceso a la BB.DD. travellog}";
+    	info += "{La api consta del control de las siguientes entidades:},";
+    	info += "{viajes}";    	
+    	info += "{itinerario}";
+    	info += "{hitos}";
+    	
+        return info + "]";
+    }
+    
     @GetMapping("/viajes")
     public List<Viaje> findAll(){
         //retornará todos los viajes
@@ -50,7 +64,7 @@ public class ViajeRestController {
         Viaje viaje = viajeService.findById(viajeId);
 
         if(viaje == null) {
-            throw new RuntimeException("Viaje id not found -"+viajeId);
+            throw new RuntimeException("Viaje not found: id "+viajeId);
         }
         //retornará al viaje con id pasado en la url
         return viaje;
