@@ -19,3 +19,5 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 - CLAVE: Travel_01.loG
 - BASEDATOS: travellog2
 
+**Diagrama de despliegue**
+
