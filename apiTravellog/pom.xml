@@ -11,7 +11,7 @@
 	<groupId>com.travellog</groupId>
 	<artifactId>apiTravellog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>apiTravellog</name>
 	<description>Api de gestión para la BB.DD. de Travellog</description>
 	<properties>
