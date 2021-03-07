@@ -25,11 +25,14 @@ drop table if exists hitos, itinerario, viaje;
 -- --------------------------------------------------------
 
 --
+--
 -- Estructura de tabla para la tabla `hitos`
 --
 
 CREATE TABLE `hitos` (
   `id_hito` int(11) NOT NULL,
+  `fk_id_itinerario` int(11) NOT NULL COMMENT 'Clave foranea itinerario',
+  `fk_id_viaje` int(11) NOT NULL COMMENT 'Clave foranea viaje',  
   `desc_corta` varchar(20) NOT NULL,
   `desc_larga` varchar(256) NOT NULL,
   `horario_inicio` time NOT NULL,
@@ -45,6 +48,7 @@ CREATE TABLE `hitos` (
 
 CREATE TABLE `itinerario` (
   `id_itinerario` int(11) NOT NULL,
+  `fk_id_viaje` int(11) NOT NULL COMMENT 'Clave foranea',
   `desc_corta` varchar(20) NOT NULL,
   `desc_larga` varchar(256) NOT NULL,
   `ruta` varchar(256) NOT NULL,
@@ -75,13 +79,13 @@ CREATE TABLE `viaje` (
 -- Indices de la tabla `hitos`
 --
 ALTER TABLE `hitos`
-  ADD PRIMARY KEY (`id_hito`);
+  ADD PRIMARY KEY (`id_hito`,`fk_id_itinerario`,`fk_id_viaje`);
 
 --
 -- Indices de la tabla `itinerario`
 --
 ALTER TABLE `itinerario`
-  ADD PRIMARY KEY (`id_itinerario`);
+  ADD PRIMARY KEY (`id_itinerario`,`fk_id_viaje`);
 
 --
 -- Indices de la tabla `viaje`
@@ -109,17 +113,16 @@ ALTER TABLE `itinerario`
 ALTER TABLE `viaje`
   MODIFY `id_viaje` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
 
-
 -- FOREING KEYS.
 
-ALTER TABLE `itinerario`
-  ADD FOREIGN KEY (`fk_id_viaje`) REFERENCES viaje(`id_viaje`);
+ALTER TABLE itinerario
+  ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
 
-ALTER TABLE `hitos`
-  ADD FOREIGN KEY (`fk_id_viaje`) REFERENCES viaje(`id_viaje`);
+ALTER TABLE hitos
+  ADD FOREIGN KEY (fk_id_viaje) REFERENCES viaje(id_viaje);
 
-ALTER TABLE `hitos`
-  ADD FOREIGN KEY (`fk_id_itinerario`) REFERENCES itinerario(`id_itinerario`);
+ALTER TABLE hitos
+  ADD FOREIGN KEY (fk_id_itinerario) REFERENCES itinerario(id_itinerario);
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
