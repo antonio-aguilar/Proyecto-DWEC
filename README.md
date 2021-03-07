@@ -14,6 +14,10 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 ![Diagrama E/R](/img/TravelLog.png "Diagrama E/R")
 
+**Diagrama físico de BB.DD.**
+
+![Diagrama BB.DD.](/img/TravelLogMySql.png "Modelo físico")
+
 **Parámetros de conexión a la BB.DD en Heroku**
 
 - HOST: den1.mysql4.gear.host
