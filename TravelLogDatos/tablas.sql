@@ -108,6 +108,20 @@ ALTER TABLE `itinerario`
 --
 ALTER TABLE `viaje`
   MODIFY `id_viaje` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Clave';
+
+
+-- FOREING KEYS.
+
+ALTER TABLE `itinerario`
+  ADD FOREIGN KEY (`fk_id_viaje`) REFERENCES viaje(`id_viaje`);
+
+ALTER TABLE `hitos`
+  ADD FOREIGN KEY (`fk_id_viaje`) REFERENCES viaje(`id_viaje`);
+
+ALTER TABLE `hitos`
+  ADD FOREIGN KEY (`fk_id_itinerario`) REFERENCES itinerario(`id_itinerario`);
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
