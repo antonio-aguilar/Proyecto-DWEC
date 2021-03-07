@@ -11,6 +11,7 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 **Diagrama entidad relación**
 ![Diagrama despliegue](/img/Despliegue.png "Diagrama de despliegue")
 
+
 ![Diagrama E/R](/img/TravelLog.png "Diagrama E/R")
 
 **Parámetros de conexión a la BB.DD en Heroku**
