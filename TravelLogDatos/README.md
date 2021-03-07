@@ -1,4 +1,8 @@
 # Spripts de despliegue y datos de prueba
-Datos de ejemplo para la base de datos TravelLog
+
+En esta sección podremos encontrar:
+- Script para la generación de la BB.DD. en GearHost
+- Script sql
+- Archivos de datos para inserción (*.csv)
 
 ## Repositorio principal
