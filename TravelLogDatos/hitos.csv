@@ -1,0 +1,7 @@
+id_hito,fk_id_itinerario,fk_id_viaje,desc_corta,desc_larga,horario_inicio,horario_fin,guia
+1,1,4,Llegada,Llegada al hotel,16:30:00,17:30:00,0
+2,1,4,Recepción,Recepción oficial,18:00:00,19:00:00,1
+3,1,4,Cena,Cena buffet,21:00:00,23:00:00,0
+1,1,5,Excursión,Excursión a pie,09:00:00,11:00:00,1
+2,1,5,Visita,Visita monasterio,12:00:00,13:30:00,1
+3,1,5,Recogida,Recogida bus,14:00:00,14:15:00,1
