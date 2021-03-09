@@ -8,7 +8,7 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 **Diagrama de despliegue**
 
-![Diagrama despliegue](/img/Despliegue.png "Diagrama de despliegue")
+![Diagrama despliegue](/img/Despliegue2.png "Diagrama de despliegue")
 
 **Diagrama entidad relación**
 
