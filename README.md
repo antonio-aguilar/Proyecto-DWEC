@@ -26,6 +26,10 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 ![Página de inicio](/img/Index.png "Index")
 
+**Front-end desplecado en Vercel**
+
+[enlace en línea](https://proyecto-dwec.vercel.app/index.html)
+
 **Parámetros de conexión a la BB.DD en Heroku**
 
 - HOST: den1.mysql4.gear.host
