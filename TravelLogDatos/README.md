@@ -1,4 +1,4 @@
-# Spripts de despliegue y datos de prueba
+# Scripts de despliegue y datos de prueba
 
 ## En esta sección podremos encontrar:
 - Script para la generación de la BB.DD. en GearHost
