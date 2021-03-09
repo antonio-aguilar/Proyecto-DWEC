@@ -22,6 +22,10 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 ![Tests con Postman](/img/TestPostman.png "Pruebas")
 
+**Página de inicio**
+
+![Página de inicio](/img/index.png "Index")
+
 **Parámetros de conexión a la BB.DD en Heroku**
 
 - HOST: den1.mysql4.gear.host
