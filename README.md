@@ -24,7 +24,7 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 **Página de inicio**
 
-![Página de inicio](/img/index.png "Index")
+![Página de inicio](/img/Index.png "Index")
 
 **Parámetros de conexión a la BB.DD en Heroku**
 
