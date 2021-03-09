@@ -1,5 +1,0 @@
-id_itinerario,fk_id_viaje,desc_corta,desc_larga,ruta,fecha
-1,5,Itinerario 11,Itinerario 1 largo,Ruta guiada,2021/08/23
-2,5,Itinerario 22,Itinerario 2 largo,Ruta libre,2021/08/24
-3,4,Itinerario 31,Itinerario 1 largo,Ruta libre,2021/08/25
-4,4,Itinerario 2,Itinerario 1 largo,Ruta libre,2021/08/26
