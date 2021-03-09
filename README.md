@@ -28,7 +28,7 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 **Front-end desplecado en Vercel**
 
-[enlace en línea](https://proyecto-dwec.vercel.app/index.html)
+[TravelLog]: https://proyecto-dwec.vercel.app/index.html
 
 **Parámetros de conexión a la BB.DD en Heroku**
 
