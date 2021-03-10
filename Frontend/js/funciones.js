@@ -36,10 +36,10 @@ function registrar() {
       var viaje = {
           descripcion_corta:$("#inputDescripcionCorta").val(),
           descripcion_larga: $("#inputDescripcionLarga").val(),
-          participantes:$("#inputParticipantes").val(),
-          transporte:$("#inputTransporte").val(),
           fecha_inicio:$("#fechaInicio").val(),
-          fecha_fin:$("#fechaFin").val()
+          fecha_fin:$("#fechaFin").val(),          
+          participantes:$("#inputParticipantes").val(),
+          transporte:$("#inputTransporte").val()
       }
 
       var dataJson = JSON.stringify(viaje);
