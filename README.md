@@ -18,6 +18,10 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 ![Diagrama BB.DD.](/img/TravelLogMySql.png "Modelo físico")
 
+**Desarrollo Eclipse**
+
+![Desarrollo Eclipse](/img/Eclipse.png "Eclipse")
+
 **Pruebas con Postman**
 
 ![Tests con Postman](/img/TestPostman.png "Pruebas")
