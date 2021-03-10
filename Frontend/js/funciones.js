@@ -43,7 +43,7 @@ function registrar() {
       }
 
       var dataJson = JSON.stringify(viaje);
-      alert(dataJson);
+
       $.ajax({
           url: "https://travellog2.herokuapp.com/api/viajes",
           type: "post",
