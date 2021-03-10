@@ -8,7 +8,7 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 **Diagrama de despliegue**
 
-![Diagrama despliegue](/img/Despliegue.png "Diagrama de despliegue")
+![Diagrama despliegue](/img/Despliegue2.png "Diagrama de despliegue")
 
 **Diagrama entidad relación**
 
@@ -25,6 +25,12 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 **Página de inicio**
 
 ![Página de inicio](/img/Index.png "Index")
+
+**Front-end desplegado en Vercel**
+
+El resultado final sería [Travellog][Travellog].
+
+[Travellog]: https://proyecto-dwec.vercel.app/index.html
 
 **Parámetros de conexión a la BB.DD en Heroku**
 
