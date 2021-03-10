@@ -34,7 +34,7 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 El resultado final sería [Travellog][Travellog].
 
-[Travellog]: https://proyecto-dwec-op8ya451n-travel-log1.vercel.app
+[Travellog]: https://proyecto-dwec-3mkq6iovw-travel-log1.vercel.app/
 
 **Parámetros de conexión a la BB.DD en Heroku**
 
