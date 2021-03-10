@@ -24,26 +24,28 @@ $('.carousel slide').carousel({
 })();
 
 //Envío de datos del formulario, método post, registro de los datos del viaje
+
 $('#formulario').on('submit', function(e) {
   e.preventDefault();
-  
+ // alert("entra");
     registrar();
 
 });
-
+//Función que envía los datos del viaje desde el formulario
 function registrar() {
-  
+ 
       var viaje = {
-          descripcion_corta:$("#inputDescripcionCorta").val(),
-          descripcion_larga: $("#inputDescripcionLarga").val(),
-          fecha_inicio:$("#fechaInicio").val(),
-          fecha_fin:$("#fechaFin").val(),          
+          desc_corta:$("#inputDescripcionCorta").val(),
+          desc_larga:$("#inputDescripcionLarga").val(),
+          fec_inicio:$("#fechaInicio").val(),
+          fec_fin:$("#fechaFin").val(),
           participantes:$("#inputParticipantes").val(),
-          transporte:$("#inputTransporte").val()
+          medio_transporte:$("#inputTransporte").val()
+          
       }
 
       var dataJson = JSON.stringify(viaje);
-
+    //  alert(dataJson);
       $.ajax({
           url: "https://travellog2.herokuapp.com/api/viajes",
           type: "post",
@@ -51,4 +53,6 @@ function registrar() {
           contentType: "application/json",
           data: dataJson
       });
+
+  
   }
