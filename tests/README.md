@@ -1,1 +1,3 @@
-# Tests realizados con navegador y POSTMAN
+# Documentación asociada a las pruebas
+
+- Fichero en formato JSON para importar desde Postman

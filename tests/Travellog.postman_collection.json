@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "82722ad4-62b3-49be-855b-4cda3137073b",
+		"name": "Travellog",
+		"description": "Tests de pruebas unitarias para el testeo de la aplicación en Heroku.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET viajes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://travellog2.herokuapp.com/api/viajes",
+					"protocol": "https",
+					"host": [
+						"travellog2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"viajes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET viaje",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://travellog2.herokuapp.com/api/viajes/6",
+					"protocol": "https",
+					"host": [
+						"travellog2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"viajes",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST viaje",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"desc_corta\": \"Viaje de Yaye\",\n    \"desc_larga\": \"Viaje de Yaye al Adriático\",\n    \"fec_inicio\": \"2021-08-03T00:00:00.000+00:00\",\n    \"fec_fin\": \"2021-08-17T00:00:00.000+00:00\",\n    \"participantes\": 1,\n    \"medio_transporte\": \"Crucero\",\n    \"viaje_id\": 3\n}"
+				},
+				"url": {
+					"raw": "https://travellog2.herokuapp.com/api/viajes",
+					"protocol": "https",
+					"host": [
+						"travellog2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"viajes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://travellog2.herokuapp.com/api/viajes/7",
+					"protocol": "https",
+					"host": [
+						"travellog2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"viajes",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT viaje",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"desc_corta\": \"Viaje de Yaye\",\n    \"desc_larga\": \"Viaje de Yaye a Korfú\",\n    \"fec_inicio\": \"2021-08-03T00:00:00.000+00:00\",\n    \"fec_fin\": \"2021-08-17T00:00:00.000+00:00\",\n    \"participantes\": 1,\n    \"medio_transporte\": \"Crucero\",\n    \"viaje_id\": 6\n}"
+				},
+				"url": {
+					"raw": "https://travellog2.herokuapp.com/api/viajes/",
+					"protocol": "https",
+					"host": [
+						"travellog2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"viajes",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
