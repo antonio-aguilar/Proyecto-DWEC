@@ -2,9 +2,9 @@
 Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 **Equipo de desarrollo**
-- Valle Delgado Paniagua
-- Antonio Manuel Aguilar Caro
-- Jesús David Gutiérrez Delgado
+- :computer: Valle Delgado Paniagua
+- :computer: Antonio Manuel Aguilar Caro
+- :computer: Jesús David Gutiérrez Delgado
 
 **Diagrama de despliegue**
 
