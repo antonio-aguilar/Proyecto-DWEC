@@ -33,7 +33,7 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 **Front-end desplegado en Vercel**
 
 - El resultado final sería [Travellog][Travellog].
-- Despliegue en [TravelLog_Netlify][Netlify].
+- Despliegue en [TravelLog_Netlify][TravelLog_Netlify].
 
 [Travellog]: https://proyecto-dwec-3mkq6iovw-travel-log1.vercel.app/
 [Netlify]: https://www.netlify.com/
