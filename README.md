@@ -36,7 +36,7 @@ El resultado final sería [Travellog][Travellog].
 
 [Travellog]: https://proyecto-dwec-3mkq6iovw-travel-log1.vercel.app/
 [Netlify]: https://www.netlify.com/
-[BackEnd]: https://github.com/antonio-aguilar/Proyecto-DWEC/blob/API/README.md
+[BackEnd]: https://github.com/antonio-aguilar/Proyecto-DWEC/tree/main/apiTravellog
 
 **Fuentes**
 - Ubicación del [BackEnd][Backend]
