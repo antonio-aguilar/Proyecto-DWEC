@@ -43,7 +43,7 @@ Proyecto del 2º trimestre de Desarrollo Web en Entorno Cliente.
 
 **Fuentes**
 - Ubicación del [BackEnd][Backend]
-- Ubicacin del [FrontEnd][Frontend]
+- Ubicación del [FrontEnd][Frontend]
 
 **Posibles mejoras**
 
